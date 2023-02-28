@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "iter_progress"
+name = "iter_print"
 version = "0.1.0"

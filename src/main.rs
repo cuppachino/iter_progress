@@ -110,7 +110,6 @@ where
 }
 
 fn main() {
-    let _paren = ('(', ')');
     let _curly = ('{', '}');
 
     // /*
@@ -125,12 +124,12 @@ fn main() {
     // ! no method named `with_delims` found for struct `Print<RangeFrom<{integer}>, Unbounded>` in the current scope
     // ! the method was found for `Print<Iter, Bounded>`
     // */
-    // for n in (0..).print().with_delims(angle) {
+    // for n in (0..).print().with_delims(_curly) {
     //       compute(&n);
     //   }
 
     let v = vec![1, 2, 3, 4, 5];
-    for n in v.iter().print().with_bound().with_delims(_paren) {
+    for n in v.iter().print().with_bound().with_delims(_curly) {
         compute(n)
     }
 }
