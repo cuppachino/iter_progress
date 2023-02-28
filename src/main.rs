@@ -112,18 +112,18 @@ where
 fn main() {
     let _curly = ('{', '}');
 
-    // /*
-    // ! the method `with_bound` exists for struct `Print<RangeFrom<{integer}>, Unbounded>`
-    // ! but the following trait bounds were not satisfied: `RangeFrom<{integer}>: ExactSizeIterator`
-    // */
+    /* UNCOMMENT TO SEE THE ERROR
+    ! the method `with_bound` exists for struct `Print<RangeFrom<{integer}>, Unbounded>`
+    ! but the following trait bounds were not satisfied: `RangeFrom<{integer}>: ExactSizeIterator`
+    */
     // for n in (0..).print().with_bound() {
     //     compute(&n);
     // }
 
-    // /*
-    // ! no method named `with_delims` found for struct `Print<RangeFrom<{integer}>, Unbounded>` in the current scope
-    // ! the method was found for `Print<Iter, Bounded>`
-    // */
+    /* UNCOMMENT TO SEE THE ERROR
+    ! no method named `with_delims` found for struct `Print<RangeFrom<{integer}>, Unbounded>` in the current scope
+    ! the method was found for `Print<Iter, Bounded>`
+    */
     // for n in (0..).print().with_delims(_curly) {
     //       compute(&n);
     //   }
